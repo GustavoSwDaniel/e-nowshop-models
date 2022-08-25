@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 
 VERSION = '0.2.5'
 DESCRIPTION = 'e-nowshop-models'
-LONG_DESCRIPTION = 'Migrations of database of college projetc'
+LONG_DESCRIPTION = 'Models of database of college projetc'
 #
 # Setting up
 setup( 
