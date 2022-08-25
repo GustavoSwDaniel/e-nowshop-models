@@ -6,9 +6,9 @@ HERE = pathlib.Path(__file__).parent
 # The text of the README file
 README = (HERE / "README.md").read_text()
 
-VERSION = '0.2.5'
+VERSION = '0.2.6'
 DESCRIPTION = 'e-nowshop-models'
-LONG_DESCRIPTION = 'Models of database of college projetc'
+LONG_DESCRIPTION = 'Models of database of college project'
 #
 # Setting up
 setup( 
@@ -22,6 +22,7 @@ setup(
     url='https://github.com/GustavoSwDaniel/e-nowshop-models',
     install_requires=['SQLAlchemy', 'psycopg2-binary', 'wheel'],
     keywords=['python'],
+    packages=['enowshop_models'],
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
