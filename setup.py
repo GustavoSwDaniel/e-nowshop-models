@@ -4,9 +4,10 @@ import pathlib
 HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
+
 README = (HERE / "README.md").read_text()
 
-VERSION = '0.2.6'
+VERSION = '0.2.7'
 DESCRIPTION = 'e-nowshop-models'
 LONG_DESCRIPTION = 'Models of database of college project'
 #
