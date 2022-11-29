@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "e-nowshop-models"
-version = "0.4.11"
+version = "0.4.12"
 description = ""
 authors = ["Your Name <you@example.com>"]
 
