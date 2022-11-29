@@ -7,13 +7,13 @@ HERE = pathlib.Path(__file__).parent
 
 README = (HERE / "README.md").read_text()
 
-VERSION = '0.4.9'
+VERSION = '0.4.10'
 DESCRIPTION = 'e-nowshop-models'
 LONG_DESCRIPTION = 'Models of database of college project'
 #
 # Setting up
 setup( 
-    name="e-nowshop-models",
+    name="enowshop-models",
     version=VERSION,
     author="GustavoSwDaniel",
     author_email="<gustavodanieldetoledo@gmail.com.com>",
