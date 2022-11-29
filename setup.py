@@ -13,7 +13,7 @@ LONG_DESCRIPTION = 'Models of database of college project'
 #
 # Setting up
 setup( 
-    name="enowshop_models",
+    name="e-nowshop-models",
     version=VERSION,
     author="GustavoSwDaniel",
     author_email="<gustavodanieldetoledo@gmail.com.com>",
