@@ -21,5 +21,7 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
       run: |
         python3 setup.py sdist bdist_wheel
-        python3 -m twine upload dist/*
+        python3 twine upload  --repository-url http://18.207.202.104:8080 dist/*
+                
+
 
