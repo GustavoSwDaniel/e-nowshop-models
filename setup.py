@@ -23,7 +23,7 @@ setup(
     url='https://github.com/GustavoSwDaniel/e-nowshop-models',
     install_requires=['SQLAlchemy', 'psycopg2-binary', 'wheel'],
     keywords=['python'],
-    packages=['enowshop_models', 'base', 'helpers', 'models', 'Makefile'],
+    packages=['enowshop_models', 'enowshop_models.base', 'enowshop_models.helpers', 'enowshop_models.models', '.Makefile'],
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
