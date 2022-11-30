@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 import pathlib
 
 HERE = pathlib.Path(__file__).parent
@@ -23,7 +23,7 @@ setup(
     url='https://github.com/GustavoSwDaniel/e-nowshop-models',
     install_requires=['SQLAlchemy', 'psycopg2-binary', 'wheel'],
     keywords=['python'],
-    packages=['enowshop_models'],
+    packages=find_packages(find_packages(include=['enowshop_models', 'enowshop_models.*'])),
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
