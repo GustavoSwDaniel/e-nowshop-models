@@ -12,3 +12,6 @@ from enowshop_models.models.provide_phones import ProvidersPhones
 from enowshop_models.models.provider import Providers
 from enowshop_models.models.provider_address import ProvidersAddress
 from enowshop_models.models.promotion import Promotion
+from enowshop_models.models.orders import Orders
+from enowshop_models.models.order_items import OrderItems
+
