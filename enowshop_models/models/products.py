@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, DateTime, Date, ForeignKey
+from sqlalchemy.dialects.postgresql import JSON
 from sqlalchemy import func, event
 from sqlalchemy.orm import relationship
 
@@ -17,6 +18,7 @@ class Products(Base):
     market = Column(Integer())
     unity = Column(Integer())
     image_url = Column(String(200))
+    infos = Column(JSON, nuallable=True)
     created_at = Column(DateTime)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
     promotion_id = Column(Integer, ForeignKey('promotion.id'), nullable=True)
