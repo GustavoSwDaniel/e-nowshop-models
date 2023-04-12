@@ -1,6 +1,6 @@
 import enum
 
-from sqlalchemy import Column, Enum, ForeignKey, Integer, String, DateTime
+from sqlalchemy import Column, Enum, ForeignKey, Integer, String, DateTime, Boolean
 from sqlalchemy import func
 
 from enowshop_models.base import Base
@@ -48,5 +48,6 @@ class UserAddress(Base):
     complement = Column(String(50), nullable=True)
     created_at = Column(DateTime)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
+    main = Column(Boolean , default=False)
 
     user_id = Column(Integer, ForeignKey('users.id'))

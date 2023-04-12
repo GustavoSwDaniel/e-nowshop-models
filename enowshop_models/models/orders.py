@@ -25,6 +25,8 @@ class Orders(Base):
 
     order_items = relationship('OrderItems')
     user_id = Column(Integer, ForeignKey('users.id'))
+    address_id = Column(Integer, ForeignKey('users_address.id'))
+    address = relationship('UserAddress')
 
 
 event.listen(Orders, 'before_insert', generate_data)
