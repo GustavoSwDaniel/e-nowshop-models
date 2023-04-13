@@ -44,6 +44,7 @@ class ProvidersAddress(Base):
     cep = Column(String(15))
     city = Column(String(50))
     state = Column(Enum(State))
+    numero = Column(Integer)
     village = Column(String(50))
     complement = Column(String(50), nullable=True)
     created_at = Column(DateTime)
