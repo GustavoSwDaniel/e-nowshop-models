@@ -46,6 +46,7 @@ class UserAddress(Base):
     state = Column(Enum(State))
     village = Column(String(50))
     complement = Column(String(50), nullable=True)
+    number = Column(Integer)
     created_at = Column(DateTime)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
     main = Column(Boolean , default=False)
