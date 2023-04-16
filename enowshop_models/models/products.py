@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime, Date, ForeignKey
 from sqlalchemy.dialects.postgresql import JSON
+from sqlalchemy.ext.mutable import MutableDict
 from sqlalchemy import func, event
 from sqlalchemy.orm import relationship
 
@@ -21,6 +22,7 @@ class Products(Base):
     infos = Column(JSON)
     created_at = Column(DateTime)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
+    physical_characteristics = Column(MutableDict.as_mutable(JSON))
     promotion_id = Column(Integer, ForeignKey('promotion.id'), nullable=True)
     category_products = relationship('CategoryProducts', back_populates='product')
     promotion = relationship('Promotion', back_populates='products')

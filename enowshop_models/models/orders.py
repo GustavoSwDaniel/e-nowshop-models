@@ -19,7 +19,6 @@ class Orders(Base):
     meta_data = Column(MutableDict.as_mutable(JSON))
     status = Column(ENUM('approved', 'pending', 'denied', 'canceled', 'refunded', name='status_enum'), default='pending')
     payment_date = Column(DateTime, nullable=True)
-    physical_characteristics = Column(MutableDict.as_mutable(JSON))
     payment_id = Column(String(), nullable=True)
     created_at = Column(DateTime)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
