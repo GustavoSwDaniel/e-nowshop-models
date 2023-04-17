@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, Date, ForeignKey
+from sqlalchemy import Column, Integer, String, DateTime, Date, ForeignKey, Boolean
 from sqlalchemy.dialects.postgresql import JSON
 from sqlalchemy.ext.mutable import MutableDict
 from sqlalchemy import func, event
@@ -19,6 +19,7 @@ class Products(Base):
     market = Column(Integer())
     unity = Column(Integer())
     image_url = Column(String(200))
+    is_active = Column(Boolean, default=True)
     infos = Column(JSON)
     created_at = Column(DateTime)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
