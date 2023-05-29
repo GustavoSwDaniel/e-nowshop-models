@@ -15,6 +15,7 @@ class OrderItems(Base):
     uuid = Column(String(36))
     product_id = Column(Integer, ForeignKey('products.id'))
     order_id = Column(Integer, ForeignKey('orders.id'))
+    quantity = Column(Integer)
     created_at = Column(DateTime)
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
