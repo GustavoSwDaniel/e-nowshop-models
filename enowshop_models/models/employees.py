@@ -11,6 +11,8 @@ class Employees(Base):
     
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
+    password = Column(String(255))
+    recovery_code = Column(String(255))
     email = Column(String(100), unique=True)
     uuid = Column(String(36))
     last_name = Column(String(50))
@@ -23,6 +25,7 @@ class Employees(Base):
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
     employees_phones = relationship('EmployeesPhones')
+    employees_permissions = relationship('Permissions')
 
 
 event.listen(Employees, 'before_insert', generate_data)
