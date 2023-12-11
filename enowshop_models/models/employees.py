@@ -13,7 +13,6 @@ class Employees(Base):
     name = Column(String(50))
     email = Column(String(100), unique=True)
     uuid = Column(String(36))
-    keycloak_uuid = Column(String(37))
     last_name = Column(String(50))
     cpf = Column(String(11), unique=True)
     position = Column(String(100))

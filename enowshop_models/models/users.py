@@ -13,7 +13,6 @@ class Users(Base):
     
     id = Column(Integer, primary_key=True)
     uuid = Column(String(36))
-    keycloak_uuid = Column(String(37))
     name = Column(String(50))
     last_name = Column(String(50))
     email = Column(String(100), unique=True)
