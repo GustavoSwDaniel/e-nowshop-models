@@ -14,4 +14,6 @@ from enowshop_models.models.provider_address import ProvidersAddress
 from enowshop_models.models.promotion import Promotion
 from enowshop_models.models.orders import Orders
 from enowshop_models.models.order_items import OrderItems
+from enowshop_models.models.permissions import Permissions
+from enowshop_models.models.employees_permissions import EmployeesPermissions
 
